@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:sans-serif;
+}
+h1{
+    margin-bottom: 15px;
+    text-align: center;
+}
+h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+h3{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.header{
+    justify-content: space-between;
+    display: flex;
+    max-width: 1100px;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: cadetblue;
+    border: 1px solid brown;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header img{
+    max-width: 200px;
+}
+.header ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    z-index: 9;
+    font-size: 20px;
+}
+.header ul li a{
+    display: block;
+    padding: 10px 20px;
+}
+.header button {
+	display: none;
+	padding: 10px;
+}
+
+@media (max-width: 1100px) {
+	.header button {
+		display: block;}
+        .header ul {
+            display: none;
+            background-color: lightsteelblue;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 119px;
+        }
+    }
+
+.slajder{
+    max-width: 1100px;
+    position:relative;
+    height: 450px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top:40px;
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+
+}   
+
+.slajder .slajder-slika{
+    height: 100%;
+    
+}
+.slajder .slajder-slika img{
+    display: none;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    
+}
+.slajder .slajder-slika img:first-child{
+    display: block;
+}
+.slajder button{
+    height: 65px;
+    width: 65px;
+    background: rgba(0,0,0,0.5);
+    border:none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+}
+.slajder button .arrow{
+    border: solid #fff;
+    display: inline-block;
+    border-width: 0 4px 4px 0;
+    padding: 10px;
+    transition: trransform 0.3s ease-out;
+    outline: none;
+}
+.slajder #right-btn{
+    right: 0;
+}
+.slajder #right-btn .arrow{
+    transform: rotate(-45deg);
+}
+.slajder #left-btn{
+    left: 0;
+}
+.slajder #left-btn .arrow{
+    transform:rotate(135deg);
+}
+/**portfolio
+**/
+.portfolio-button{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio-btnproizvodi{
+    padding-bottom: 30px;
+    padding-top: 10px;
+    text-align: center;
+}
+.portfolio-btnproizvodi button{
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border: 1px solid brown;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: aquamarine;
+}
+.portfolio-prikaz{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.portfolio-prikaz-bloka{
+    width: 30%;
+    box-shadow: 0 18px 25px 3px rgba(0, 0, 0, 0.14), 0 6px 35px 8px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    padding: 100px 30px;
+    margin-bottom: 5%;
+}
+.portfolio-prikaz-bloka img{
+    width: 170px;
+    height: 200px;
+    margin: auto;
+    display: block;
+}
+@media (max-width: 767px) {
+    .portfolio-prikaz-bloka {
+        width: 47%;
+    }
+}
+.plava{
+    background-color: aqua;
+}
+.siva{
+    background-color: dimgray;
+}
+.bela{
+    background-color: lightcoral;
+}
+.crvena{
+    background-color: crimson;
+}
+.braon{
+    background-color: chocolate;
+}
+.crna{
+    background-color: darkolivegreen;
+}
+.modal-blok{
+    width: 1100px;
+    padding: 100px;
+    margin: auto;
+}	
+.modal-blok button{
+    margin: auto;
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: blueviolet;
+    font-weight: bold;
+}
+.popup-blok{
+    display: none;
+    position: fixed;
+    left:50%;
+
+    top:60%;
+    right: 0%;
+    z-index: 200;
+    max-width: 500px;
+    background-color:cyan;
+}
+.popup-blok button{
+    font-size: 17px;
+	cursor: pointer;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	background-color: transparent;
+	font-weight: bold;
+	border: 0;
+}
+.overlay{
+    display: none;
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+/**
+Podaci o korisniku
+*/
+form{
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+form div{
+    padding: 15px 0;
+}
+form div label{
+    display: block;
+    font-weight: bold;
+    font-size: 17px;
+}
+form div input{
+    height: 50px;
+    width: 100%;
+    font-size: 17px;
+
+}
+form div button{
+    padding: 10px 30px;
+    font-size: 18px;
+}
+form ul{
+    list-style: none;
+}
+form ul li{
+    color: red;
+}
+/**
+END
+*/
+.end{
+    margin: auto;
+    max-width: 1100px;
+    background-color: aqua;
+    height: 200px;
+    margin-top: 20px;
+}
+.end h1{
+    padding-top: 100px;
+}

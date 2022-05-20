@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>prodavnica_odece</title>
+</head>
+<body>
+    <div class="header">
+        <img src="img/logo.jpg">
+        <button onclick="buttonMenu()">MENU</button>
+        <ul>
+            <li><a href="#">Pocetna</a></li>
+            <li><a href="#">O nama</a></li>
+            <li><a href="#">Usluge</a></li>
+            <li><a href="#">Galerija</a></li>
+            <li><a href="#">Kontakt</a></li>
+
+
+
+        </ul>
+    </div>
+    <h2>Galerija proizvoda</h2>
+    <div class="slajder">
+    <button id="left-btn"><i class="arrow"></i></button>
+    <div class="slajder-slika">    
+        <img src="img/odeca1.jpg">
+        <img src="img/odeca2.jpg">
+        <img src="img/odeca3.jpg">
+        <img src="img/odeca4.jpg">
+    </div>    
+    <button id="right-btn"><i class="arrow"></i></button>
+    </div>
+
+    <h2>Portfolio</h2>
+    <div class="portfolio-button">
+        <div class="portfolio-btnproizvodi">
+        <button class="plava" data-category="sve" onclick="portfolioKlik(this)">Sve</button>
+        <button class="crna" data-category="farmerke" onclick="portfolioKlik(this)">Farmerke</button>
+        <button class="bela" data-category="majice" onclick="portfolioKlik(this)">Majice</button>
+        <button class="crvena" data-category="dukserice" onclick="portfolioKlik(this)">Dukserice</button>
+        <button class="siva" data-category="dzemperi" onclick="portfolioKlik(this)">Dzemperi</button>
+        <button class="braon" data-category="kosulje" onclick="portfolioKlik(this)">Kosulje</button>
+    </div>
+        <div class="portfolio-prikaz">
+            <div class="portfolio-prikaz-bloka plava" data-category="farmerke">
+                <h3>Muske farmerice</h3>
+                <img src="img1/muskafarmerka.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka crvena" data-category="dukserice">
+                <h3>Dukserica Zenska</h3>
+                <img src="img1/dukszenski.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka crna" data-category="farmerke">
+                <h3>Zenske farmerice</h3>
+                <img src="img1/zenskafarmerka.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka plava" data-category="farmerke, kosulje">
+                <h3>Kosulje i Farmerice</h3>
+                <img src="img1/kosifar.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka bela" data-category="majice">
+                <h3>Majice svih velicina</h3>
+                <img src="img1/majica.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka crna" data-category="farmerice">
+                <h3>Muske farmerice</h3>
+                <img src="img1/far.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka siva" data-category="dukserice">
+                <h3>Muske i zenske Dukserice</h3>
+                <img src="img1/duksevi.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka siva" data-category="dukserice, dzemperi">
+                <h3>Dukserice i Dzemperi</h3>
+                <img src="img1/dzemper.jpg">
+            </div>
+            <div class="portfolio-prikaz-bloka braon" data-category="kosulje">
+                <h3>Muske kosulje</h3>
+                <img src="img1/kosulja.jpg">
+            </div>
+            
+        </div>
+    </div>
+    <div class="modal-blok">
+    	<button onclick="openModal()">Modal Button</button>
+    </div>
+
+
+    <div class="popup-blok">
+    	<button id="closeBlok" onclick="closeModal()">X</button>
+
+    	<h4>Modal Title</h4>
+    	 Hvala na poseti našem sajtu. Nadamo se da vam se 
+         svidela kolekcija naše odeće, i da će te nešto izabrati.
+         Za sve informacije kontaktirajte nas putem mejl adrese.
+         Hvala.
+    </div>
+
+
+    <div class="overlay"></div>
+
+    <form>
+        <h2>Postavite pitanje</h2>
+        <div>
+            <label for="ime_prezime">Ime i prezime:</label>
+            <input id="ime_prezime" type="text" name="ime_prezime" placeholder="Unesite ime i prezime">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Unesite email">
+        </div>
+        <div>
+            <label for="lozinka">Lozinka:</label>
+            <input type="text" name="lozinka" id="lozinka" placeholder="********">
+        </div>
+        <div>
+            <label for="ponovljena_lozinka">Potvrdite vasu lozinku:</label>
+            <input type="text" name="ponovljena_lozinka" id="ponovljena_lozinka" placeholder="********">
+        </div>
+        <div>
+            <button>Registruj se:</button>
+        </div>
+    </form>
+    <div class="end">
+        <h1>Hvala na poseti!!!</h1>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
